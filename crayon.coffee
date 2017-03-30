@@ -241,7 +241,7 @@ crayon.palette = ->
   """Displays all the colors"""
   crayon.log crayon.inverse (crayon(i)("  #{ if i in VERY_DARK_COLORS then crayon.bgWhite i else i }  ") for i in [0...256]).join ''
 
-crayon.__doc__ = require('fs').readFileSync __dirname + '/README.md', 'utf8'
+crayon.__doc__ = 'nothing' #require('fs').readFileSync __dirname + '/README.md', 'utf8'
 pkg = require './package'
 crayon.version = pkg.version
 
